@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/kyloo/.dotnet/store/|arch|/|tfm|",
+      "/Users/kyloo/.nuget/packages"
+    ]
+  }
+}

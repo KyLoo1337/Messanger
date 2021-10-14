@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Messanger</name>
+    </assembly>
+    <members>
+        <member name="F:Messanger.Controllers.UserControll._users">
+            <summary>
+            Cписок пользователей.
+            </summary>
+        </member>
+        <member name="F:Messanger.Controllers.UserControll._messages">
+            <summary>
+            Список сообщений.
+            </summary>
+        </member>
+        <member name="F:Messanger.Controllers.UserControll.idNum">
+            <summary>
+            Номер id следующего добавленного пользователя.
+            </summary>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.GenerateRandomString(System.Int32)">
+            <summary>
+            Генерация строки рандомных букв.
+            </summary>
+            <param name="len"> Длинна строки. </param>
+            <returns> Сгенерированную строку. </returns>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.CreateUser(Messanger.Models.CreateUserRequest)">
+            <summary>
+            Создать пользователя.
+            </summary>
+            <param name="req"> Входные данные (имя пользователя и email). </param>
+            <returns> Ок и пользователя в случае, если всё хорошо, иначе NotFound. </returns>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.RandomGenetare(System.Int32,System.Int32)">
+            <summary>
+            Рандомная генерация пользователей и их сообщений.
+            </summary>
+            <param name="countOfUsers"> Количество пользователей, которых требуется создать. </param>
+            <param name="countOfUserMessages"> Количетво сообщений от каждого пользователя каждому пользователю. </param>
+            <returns></returns>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.GetAllUsers(System.Int32,System.Int32)">
+            <summary>
+            Вывод пользователей с возможностью установки лимита и оффсета.
+            </summary>
+            <param name="Limit"> Количество пользователей, которое необходимо вернуть (максимальное). </param>
+            <param name="Offset"> Порядковый номер пользователя, начиная с которого необходимо получать информацию. </param>
+            <returns> Пользователей. </returns>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.GetUserByEmail(System.String)">
+            <summary>
+            Вывод данных о пользователе с определённым email-ом.
+            </summary>
+            <param name="Email"> Email пользователя, которого требуется найти. </param>
+            <returns> Данные о пользователе. </returns>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.GetMessages(System.String,System.String)">
+            <summary>
+            Получения сообщений отправленных на конкретный email или с конкретного email-а или оба условия сразу.
+            </summary>
+            <param name="RecieverEmail"> Email получателя. </param>
+            <param name="SenderEmail"> Email отправителя. </param>
+            <returns> Массив с сообщениями. </returns>
+        </member>
+        <member name="M:Messanger.Controllers.UserControll.SendMessageToUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            Отправить пользователю сообщение.
+            </summary>
+            <param name="SenderEmail"> Email отправителя. </param>
+            <param name="RecieverEmail"> Email получателя. </param>
+            <param name="Subject"> Тема. </param>
+            <param name="MessageText"> Текст сообщения. </param>
+            <returns> Ок и сообщение. </returns>
+        </member>
+    </members>
+</doc>
